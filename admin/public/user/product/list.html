@@ -1,0 +1,77 @@
+<section ng-controller="ProductController">
+  <div class="mdl-color--blue-grey ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">User Product List</h3>
+      <h4 class="mdl-color-text--amber-100 m-b-20 no-m-t w100">&nbsp;</h4>
+    </div>
+  </div>
+
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    
+    <div class="mdl-cell mdl-cell--9-col  mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          
+          <table class="mdl-data-table ml-table-bordered mdl-js-data-table ">
+            <colgroup>
+              <col class="auto-cell-size p-r-20">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="mdl-data-table__cell--non-numeric">Product Name</th>
+                <th class="mdl-data-table__cell--non-numeric">Image</th>
+                <th class="mdl-data-table__cell--non-numeric">Cost($)</th>
+                <th class="mdl-data-table__cell--non-numeric">Sell Price($)</th>
+                <th class="mdl-data-table__cell--non-numeric">Retails Price($)</th>
+                <!-- <th class="mdl-data-table__cell--non-numeric">Action</th> -->
+              </tr>
+            </thead>
+
+            <tbody ng-if="product_details.length">
+              <tr dir-paginate="product in product_details|itemsPerPage:10">
+                <td>{{product.product_name}}</td>
+                <td>                 
+                  <img ng-src="{{file_path}}{{product.product_image}}" width="80" /> 
+                </td>                
+                <td>
+                  {{product.cost}}
+                </td>
+                <td>
+                  {{product.sell_price}}
+                </td>
+                <td>
+                  {{product.retail_price}}
+                </td>
+               <!--  <td>  -->
+                  <!-- <img class="delete_row" ng-src="{{file_path}}images/edit.png" width="20" style="cursor:pointer" data-ng-click="redirect_edit(product.id);" />                 
+                  <img class="delete_row" ng-src="{{file_path}}images/delete.png" width="20" style="cursor:pointer" data-ng-click="delete_product(product.id);" /> -->
+               <!--  </td> -->
+              </tr> 
+
+              <tr ng-if="product_details.length > 10">
+                <td colspan="6" class="text-center">
+                  <dir-pagination-controls
+                    max-size="7"
+                    direction-links="true"
+                    boundary-links="true" >
+                  </dir-pagination-controls>
+                </td>
+              </tr>      
+            </tbody>    
+            <tbody ng-if="!product_details.length">
+              <tr>
+                <td class="center" colspan="12">No data present</td>                
+              </tr>  
+            </tbody>                    
+          </table>
+        </div>
+        <div class="tags m-t-20 ">
+          <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#/product/add" >Add</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>

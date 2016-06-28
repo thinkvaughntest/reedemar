@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redeemar Sign In</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/rcarousel.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.dbpas.carousel.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body style="background: #f1f1f1;">
+    <header>
+    	<div class="header-top">
+     		 <div class="container">
+        		<div class="row">
+        			<div class="col-md-12">
+                    	<div class="logo"><a href="index.html"><img src="images/logo.png" alt="redeemar" title="redeemar"></a></div>
+                    	<div class="top-right-menu">
+                        	<ul>
+                            	<li><a href="#">Help</a></li>
+                            	<li><a href="#">Sign In</a></li>
+                            	<li><a href="#">Sign Up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            	</div>
+            </div>
+        </div>
+    </header>
+<div class="clear"></div> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 registration">
+            <h2>Registration</h2>
+            <form>
+            <div class="col-md-6 col-sm-6 reg-left">
+                  <h3>Your Company Information</h3>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Company Name">
+                  </div>
+                  <div class="form-group">
+                    <select class="form-control">
+                        <option>Category</option>
+                        <option>Category1</option>
+                        <option>Category2</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="" placeholder="Company Website">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control input-small-half" id="" placeholder="Owner Name">
+                    <input type="text" class="form-control input-small-half" id="" placeholder="Last Name">
+                  </div>
+                  <h3>Company Contact Details</h3>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="" placeholder="Phone Number">
+                  </div>
+                  <h3>Company Address</h3>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="" placeholder="Street Address">
+                  </div> 
+                  <div class="form-group">
+                    <input type="text" class="form-control input-small-third" id="" placeholder="City">
+                    <input type="text" class="form-control input-small-third" id="" placeholder="State"> 
+                    <input type="text" class="form-control input-small-third" id="" placeholder="Zip">
+                  </div>
+                  <h3>Password</h3>
+                   <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                   </div>
+                   <div class="form-group">
+                    <input type="password" class="form-control" id="" placeholder="Retype Password">
+                   </div>
+
+                   <div class="checkbox policy-check">
+                    <label>
+                      <input type="checkbox" class="checkbox-custom" id="checkbox-2" checked> 
+                      <label for="checkbox-2" class="checkbox-custom-label">I am the owner of this company</label>
+                    </label>
+                    <label>
+                      <input type="checkbox" class="checkbox-custom" id="checkbox-3"> 
+                      <label for="checkbox-3" class="checkbox-custom-label">I have been given permission on behalf of the company to create 
+new offers and purchase redeemar products.</label>
+                    </label>
+                  </div>
+            </div>
+            <div class="col-md-6 col-sm-6 reg-right">
+                <p class="heading-logo">Logo Creator</p>
+                <h3>Search For my logo</h3>
+                <div class="form-group logo-search">
+                    <input type="text" class="form-control input-small-half" id="exampleInputEmail2">
+                    <button type="submit" class="btn btn-default btn-block search-btn">Search</button>
+                <p>These are logos we found based on your search.</p>
+                </div>
+
+                <!--Carousel Start-->
+                <div class="image-slider-box">
+                        <div class="inner">
+                            <ul id="flexiselDemo3">
+                                <li>
+                                    <img src="images/reg-logo1.png">
+                                </li>
+                                <li>
+                                    <img src="images/reg-logo2.png">
+                                </li>
+                                <li>
+                                    <img src="images/reg-logo3.png">
+                                </li>
+                                <li>
+                                    <img src="images/reg-logo4.png">
+                                </li>
+                                <li>
+                                    <img src="images/reg-logo1.png">
+                                </li>
+                                <li>
+                                    <img src="images/reg-logo2.png">
+                                </li>
+                                <li>
+                                    <img src="images/reg-logo3.png">
+                                </li>
+                                <li>
+                                    <img src="images/reg-logo4.png">
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+                <!--Carousel End-->
+
+                <p class="didnot-text">Didn't find your logo?</p>
+                <div class="form-group upload">
+                    <span class="upload-btn">Upload your logo</span>
+                    <input type="file">
+                </div>
+                <p class="maxfile-txt">*Max file size: 2MB - JPG/JPEG format only.   </p>
+                <h3>Preview </h3>
+                <div class="image-preview">
+                    <img src="images/reg-logo1big.jpg" class="img-responsive">
+                </div>
+                <p class="logo-scan">Logo scanability</p>
+                <div class="star-img">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <div class="rules">
+                    <p>*By uploading the file you certify that you own the copyright for these photos or are authorized by the owner to make a photo-to-canvas reproduction.</p>
+                    <p>**In order to be used by the logo scanner, the system will rate automaticaly your logo. You need at least two and half stars to be aprooved.</p>
+                    <div class="checkbox policy-check">
+                        <label>
+                          <input type="checkbox" class="checkbox-custom" id="checkbox-4" checked> 
+                          <label for="checkbox-4" class="checkbox-custom-label">If your logo doesn’t meet this minimum requirement, you need to allow Redeemar to professionaly enhance it for best results.</label>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">&nbsp</div>
+            <button type="submit" class="btn btn-default btn-block complete-reg">Complete Registration</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<!-- Footer Start -->  
+<footer class="footer">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="col-md-3 col-sm-3">
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <img src="images/app-store.png" class="img-responsive" />
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <img src="images/google-play.png" class="img-responsive" />
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <img src="images/rar.png" class="img-responsive img-rar" />
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-3 col-sm-3 foot-section">
+                    <p class="app-text">App Store Google play &copy  2015 redeemar, Inc. Apple, iPad, iPhone, iPod touch, and iTunes are Trademarks of Apple Inc. registered in the U.S and other countries.</p>
+                    <p class="app-text">App store is a service mark of  Apple Inc.</p>
+                    <p class="app-text">Terms of use privacy</p>
+                </div>
+                <div class="col-md-3 col-sm-3 foot-section">
+                    <ul>
+                        <li><a href="#">about redeemer</a></li>
+                        <li><a href="#">why choose us</a></li>
+                        <li><a href="#">testimonials</a></li>
+                        <li><a href="#">track my offer</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>    
+                </div>
+                <div class="col-md-3 col-sm-3 foot-section">
+                    <ul class="app-store">
+                        <li><a href="#">about redeemer</a></li>
+                        <li><a href="#">why choose us</a></li>
+                        <li><a href="#">testimonials</a></li>
+                        <li><a href="#">track my offer</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul> 
+                </div>
+                <div class="col-md-3 col-sm-3 foot-section">
+                    <p class="customer">Customer care</p>
+                    <p class="phone">Phone 1-888-979-2656</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <p class="copyright">© 2016 redeemar, Inc.. All rights reserved.</p>
+            <div>
+        </div>
+      </div>
+</footer>
+<!-- Footer End --> 
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="js/jquery.flexisel.js"></script>
+ <script>
+    $(window).load(function() {
+      $("#flexiselDemo3").flexisel({
+        visibleItems: 3,
+        itemsToScroll: 3,         
+        autoPlay: {
+            enable: true,
+            interval: 5000,
+            pauseOnHover: true
+        }        
+    });
+    });
+  </script> 
+
+
+<script type="text/javascript"> 
+jQuery(document).ready(function(){
+    jQuery(".click").click(function(){
+        jQuery(".main_nav").slideToggle(700);
+    });
+});
+
+function jqUpdateSize(){
+    var width = jQuery('.banner_vdobox').width();
+    var sqwidth = width * 33.85 / 100;
+    jQuery('.banner_vdobox').css('height', sqwidth);
+};
+jQuery(document).ready(jqUpdateSize);    // When the page first loads
+jQuery(window).resize(jqUpdateSize);     // When the browser changes size
+</script>
+<script src="js/bootstrap.min.js"></script>
+</html>

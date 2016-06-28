@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redeemar Search View</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <header>
+        <div class="header-top">
+             <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="redeemar" title="redeemar"></a></div>
+                        <div class="top-right-menu">
+                            <ul>
+                                <li><a href="#">Sign In</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-search">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8">
+                        <input class="search-txt" type="text" placeholder="How can I help you"/>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <input class="location" type="text" placeholder="Location"/><button class="search-btn-new" name="search-btn-new" type="submit" value="Go"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="main-nav">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="header_lt">
+                       <div class="click">Menu</div>
+                    </div>                
+                    <div class="main_nav_deals main_nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">DEALS</a></li>
+                        <li><a href="#">SHOPS</a></li>
+                        <li><a href="#">BLOG</a></li>
+                    </ul>                                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<div class="clear"></div> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 search-result">
+            <h2>Here are your results 'Pizza'</h2>
+            <div class="col-md-3 col-sm-3 search-widget-area">
+                <div class="box top-filter">
+                    <h3>Expired</h3>
+                    <div class="example">
+                      <div class="slider-wrapper">
+                        <input type="text" class="js-decimal" />
+                        <div id="js-display-decimal" class="display-box"></div>
+                      </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="box category-list">
+                    <h3>Category</h3>
+                    <ul>
+                        <li>
+                            <a href="#"><span>123</span>Food & drink</a>
+                            <ul class="subcat-dropdown">
+                                <li><a href="#">Sub cat 1</a></li>
+                                <li><a href="#">Sub cat 2</a></li>
+                                <li><a href="#">Sub cat 3</a></li>
+                                <li><a href="#">Sub cat 4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span>134</span>Saloons & spas</a></li>
+                        <li><a href="#"><span>154</span>Health & fitness</a></li>
+                        <li><a href="#"><span>123</span>Electronics</a></li>
+                        <li><a href="#"><span>123</span>Travel</a></li>
+                        <li><a href="#"><span>123</span>Shoping</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="box">
+                    <select>
+                        <option value="">Brand</option>
+                        <option>Product Brand 1</option>
+                        <option>Product Brand 2</option>
+                        <option>Product Brand 3</option>
+                        <option>Product Brand 4</option>
+                        <option>Product Brand 5</option>
+                    </select>
+                </div>
+                <div class="clear"></div>
+                <div class="box ">
+                    <select class="fontawesome-select">
+                        <option value="">Star Marks</option>
+                        <option>XYXZZ</option>
+                    </select>
+                </div>
+                <div class="clear"></div>
+                <div class="box category-list savings-list">
+                    <h3>Savings</h3>
+                    <ul>
+                        <li><a href="#"><span>123</span>5% Off or more</a></li>
+                        <li><a href="#"><span>134</span>10% Off or more</a></li>
+                        <li><a href="#"><span>154</span>20% Off or more</a></li>
+                        <li><a href="#"><span>155</span>30% Off or more</a></li>
+                        <li><a href="#"><span>120</span>40% Off or more</a></li>
+                        <li><a href="#"><span>130</span>50% Off or more</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-9 col-sm-9 search-result-view nopadding">
+                <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search1.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search2.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="clear">&nbsp</div>
+                 <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search3.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search4.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="clear">&nbsp</div>
+                 <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search5.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search6.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="clear">&nbsp</div>
+                 <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search7.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search8.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="clear">&nbsp</div>
+                 <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search9.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search10.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="clear">&nbsp</div>
+                 <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search11.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 product-view">
+                    <a href="#">
+                        <img src="images/search12.jpg" alt="img01" class="img-responsive" />
+                        <div class="product">
+                            <div class="product-title">Famiglia’s Famous dinner for 2</div>
+                            <div class="product-savings">
+                            <p>$$$</p>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="savings">$3 SAVINGS</span></div>
+                            <div class="col-expires">*expires in 2 days</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="clear">&nbsp</div>
+                 <div class="col-md-12 viewall-section">
+                    <a href="#" class="view-btn">View All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<!-- Footer Start -->  
+<footer class="footer">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="col-md-3 col-sm-3">
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <img src="images/app-store.png" alt="img01" class="img-responsive" />
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <img src="images/google-play.png" alt="img01" class="img-responsive" />
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <img src="images/rar.png" alt="img01" class="img-responsive img-rar" />
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-3 col-sm-3 foot-section">
+                    <p class="app-text">App Store Google play &copy  2015 redeemar, Inc. Apple, iPad, iPhone, iPod touch, and iTunes are Trademarks of Apple Inc. registered in the U.S and other countries.</p>
+                    <p class="app-text">App store is a service mark of  Apple Inc.</p>
+                    <p class="app-text">Terms of use privacy</p>
+                </div>
+                <div class="col-md-3 col-sm-3 foot-section">
+                    <ul>
+                        <li><a href="#">about redeemer</a></li>
+                        <li><a href="#">why choose us</a></li>
+                        <li><a href="#">testimonials</a></li>
+                        <li><a href="#">track my offer</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>    
+                </div>
+                <div class="col-md-3 col-sm-3 foot-section">
+                    <ul class="app-store">
+                        <li><a href="#">about redeemer</a></li>
+                        <li><a href="#">why choose us</a></li>
+                        <li><a href="#">testimonials</a></li>
+                        <li><a href="#">track my offer</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul> 
+                </div>
+                <div class="col-md-3 col-sm-3 foot-section">
+                    <p class="customer">Customer care</p>
+                    <p class="phone">Phone 1-888-979-2656</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <p class="copyright">© 2016 redeemar, Inc.. All rights reserved.</p>
+            <div>
+        </div>
+      </div>
+</footer>
+<!-- Footer End --> 
+
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/powerange.min.js"></script>
+
+    
+    <script type="text/javascript"> 
+    jQuery(document).ready(function(){
+    jQuery(".click").click(function(){
+    jQuery(".main_nav").slideToggle(700);
+    });
+    
+    });
+
+    function jqUpdateSize(){
+    var width = jQuery('.banner_vdobox').width();
+    var sqwidth = width * 33.85 / 100;
+    jQuery('.banner_vdobox').css('height', sqwidth);
+    };
+    jQuery(document).ready(jqUpdateSize);    // When the page first loads
+    jQuery(window).resize(jqUpdateSize);     // When the browser changes size
+    </script> 
+
+
+
+<!--==================Range Filter=======================-->
+    <script type="text/javascript">
+    // Decimal.
+    var dec = document.querySelector('.js-decimal');
+    var initDec = new Powerange(dec, { decimal: true, callback: displayDecimalValue, max: 100, start: 100 });
+
+    function displayDecimalValue() {
+      document.getElementById('js-display-decimal').innerHTML = dec.value;
+    }
+    
+
+    // On change.
+    var changeInput = document.querySelector('.js-check-change')
+      , initChangeInput = new Powerange(changeInput, { start: 70 });
+
+    changeInput.onchange = function() {
+      document.getElementById('js-display-change').innerHTML = changeInput.value;
+    };
+    </script>
+<!--==================Range Filter=======================-->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".category-list li").click(function(e){
+            $(this).find(".subcat-dropdown").toggle(500);
+            e.preventDefault();
+        });
+    });
+</script>
+
+
+    <script src="js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,79 @@
+  <style>
+    .cropArea {
+      background: #E4E4E4;
+      margin: auto;
+      overflow: hidden;
+    }
+    .cropArea.big {
+      width:800px;
+      height:600px;
+    }
+    .cropArea.medium {
+      width:500px;
+      height:350px;
+    }
+    .cropArea.small {
+      width:300px;
+      height:200px;
+    }
+  </style>
+
+<section class="text-fields" ng-controller="ProductController" >
+  <div class="mdl-color--amber ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">User Add Product</h3>
+      <h4 class="mdl-color-text--amber-100 m-b-20 no-m-t w100">&nbsp;</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="p-l-20 p-r-20 p-b-20" id="show_message" style="display:none">
+            <div id="success_div" class="alert alert-success">
+                Data inserted successfully
+            </div>
+             <div id="error_div" class="alert alert-danger">               
+            </div>
+          </div>
+          
+          <div class="p-30">
+            <form name="f2" method="POST"  enctype="multipart/form-data">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">                
+                <input ng-model="Product.product_name" class="mdl-textfield__input" required type="text" id="product_name" placeholder="Name" />
+              </div>
+              <div class="">
+                <p>Image</p> 
+                <span >
+                  <img class="border_container prod_image"   width="120" ng-src="{{site_path}}../uploads/no-image-found.gif" />
+                </span> 
+                <input type="hidden"  name="image_id" id="image_id" />
+               <!--  <input  type="file" id="product_image"  value="Select an image" placeholder="Select an image" >
+                <div id="product_image_encode"  style="display:none"></div> -->
+                <a value="1" class=" various fancybox.iframe put_href" href="{{site_path}}../../admin/public/index.php/directory/repository" title="Choose image from your Image Repository. Or upload an Image."> 
+                    <button  type="button" class="choose-btn">Import Image</button>
+                </a>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">                
+                <input ng-model="Product.cost" class="mdl-textfield__input" type="text" id="cost" required placeholder="Cost($)" />
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">          
+                <input ng-model="Product.sell_price" class="mdl-textfield__input" type="text" required id="sell_price" placeholder="Sell Price($)" />
+              </div>              
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">                
+                <input ng-model="Product.retail_price" class="mdl-textfield__input" type="text" id="retail_price" required placeholder="Retails Price($)" />
+              </div>
+              <div class="m-t-20">
+                <button type="submit" ng-click = "addProduct()" ng-disabled="disableaddproduct" ng-bind ="addproductbtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="add_product">
+                  Save
+                </button>               
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>

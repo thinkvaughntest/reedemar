@@ -1,0 +1,151 @@
+<style>
+  .m-l {
+    margin-left: 5px;
+  }
+
+</style>
+<section ng-controller="CampaignAddController">
+  <div class="mdl-color--blue-grey ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">User Campaign List</h3>
+      <h4 class="mdl-color-text--amber-100 m-b-20 no-m-t w100">&nbsp;</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--9-col  mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="p-l-20 p-r-20 p-b-20" ng-if="show_error_msg">
+            <div class="alert alert-success">
+                Data inserted successfully
+            </div>
+          </div>
+          
+          <table class="mdl-data-table ml-table-bordered mdl-js-data-table pointer-table">
+            <colgroup>
+              <col class="auto-cell-size p-r-20">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="mdl-data-table__cell--non-numeric">Campaign Name</th>
+                <th class="mdl-data-table__cell--non-numeric">Start date</th>
+                <th class="mdl-data-table__cell--non-numeric">End date</th>
+                <th class="mdl-data-table__cell--non-numeric">Campaign Offers</th>
+                <th class="mdl-data-table__cell--non-numeric">Action</th>
+              </tr>
+            </thead>
+            <tbody ng-if="campaign_details.length" dir-paginate="campaign in campaign_details|itemsPerPage:10" current-page="pagination.current">              
+              <tr>
+                <td ng-click="showOrHideAllOffer(campaign.id)">{{campaign.campaign_name}}</td>                
+                <td ng-click="showOrHideAllOffer(campaign.id)">
+                  {{campaign.start_date.split('-')[1]+'/'+campaign.start_date.split('-')[2]+'/'+campaign.start_date.split('-')[0] }}   
+
+                </td>
+                <td ng-click="showOrHideAllOffer(campaign.id)">                  
+                  {{campaign.end_date.split('-')[1]+'/'+campaign.end_date.split('-')[2]+'/'+campaign.end_date.split('-')[0] }} 
+                </td>
+                <td ng-click="showOrHideAllOffer(campaign.id)">{{campaign.total_offer}}<i class="fa fa-angle-down m-l" ng-if="campaignItemIndex == campaign.id" ></i><i class="fa fa-angle-up m-l" ng-if="campaignItemIndex != campaign.id"></i>
+                </td>
+                <td>                  
+                  <img title="Edit Campaign" class="delete_row" ng-src="{{file_path}}images/edit.png" width="20" style="cursor:pointer" data-ng-click="redirect_edit(campaign.id, currentPageChanged);" />
+                  
+                  <img title="Delete Campaign" class="delete_row" ng-src="{{file_path}}images/delete.png" width="20" style="cursor:pointer" data-ng-click="delete_campaign(campaign.id);" />
+
+                  <img title="Add Offer to this Campaign" class="delete_row" ng-src="{{file_path}}images/add_new.png" width="20" style="cursor:pointer" ng-click="addNewOffer(campaign.id)" />
+                </td>
+              </tr>
+              <tr ng-if="campaignItemIndex == campaign.id">
+                <td colspan="8">
+                  <div class="campaign-main" ng-if="allOfferList.length">
+                    <ul>
+                      <li ng-repeat="offer in allOfferList">
+                        <div class="single-campaign">
+                          <div class="product-view section-most">
+                            <a href="#">
+                                <img class="img-responsive" alt="{{offer.offer_description}}" src="{{offer.offer_image_path}}">
+                                <div class="product">
+                                    <div class="product-title">{{offer.offer_description}}</div>
+                                    <div class="product-savings">
+                                      <p>{{offer.partner_settings.price_range_id}}</p>
+                                      <i aria-hidden="true" class="fa fa-star"></i>
+                                      <i aria-hidden="true" class="fa fa-star"></i>
+                                      <i aria-hidden="true" class="fa fa-star"></i>
+                                      <i aria-hidden="true" class="fa fa-star"></i>
+                                      <span class="savings">
+                                        <span ng-if="offer.value_calculate == 2 || offer.value_calculate == 4 || offer.value_calculate == 6"> ${{ offer.discount}}</span>
+                                        <span ng-if="offer.value_calculate == 1 || offer.value_calculate == 3 || offer.value_calculate == 5"> {{ offer.discount}}%</span>
+                                        <span ng-if="offer.value_calculate == 1 || offer.value_calculate == 2">OFF</span>
+                                        <span ng-if="offer.value_calculate == 3 || offer.value_calculate == 4">DISCOUNT</span>
+                                        <span ng-if="offer.value_calculate == 5 || offer.value_calculate == 6">SAVING</span>
+                                      </span>
+                                    </div>
+                                    <div class="col-expires">*expires in {{offer.remaining_days}} days</div>
+                                </div>
+                            </a>
+                          </div>
+                        
+                        </div> 
+                        <div class="single-camp-details">
+                          <span><i class="fa fa-eye" aria-hidden="true"></i> 1987</span>
+                          <span><input type="checkbox"> 274</span>
+                          <span title="Edit Campaign"><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></span>
+                          <span ng-click="delete_offer(offer.id)" title="Delete Campaign"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></span>
+                          <span><a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i></a></span>
+                        </div>  
+                      </li>
+                      
+                      <li>
+                        <div class="single-campaign">
+                        <div class="add-more">
+                          <a ng-click="addNewOffer(campaign.id)">Add new offer </br> to this Campaign</a>
+                        
+                        </div> 
+                        </div> 
+                      </li>
+                    
+                    </ul>
+                  </div>
+                  <div class="campaign-main" ng-if="!allOfferList.length">
+                    <ul>                      
+                      <li>
+                        <div class="single-campaign">
+                        <div class="add-more">
+                          <a ng-click="addNewOffer(campaign.id)">Add new offer </br>to this Campaign</a>
+                        </div> 
+                        </div> 
+                      </li>
+                    
+                    </ul>  
+                  </div> 
+                </td>
+              </tr>
+            </tbody>      
+            <tbody ng-if="campaign_details.length > 10">
+              <tr>
+                <td colspan="6" class="text-center">
+                  <dir-pagination-controls
+                    max-size="7"
+                    direction-links="true"
+                    boundary-links="true" >
+                  </dir-pagination-controls>
+                </td>
+              </tr> 
+            </tbody>         
+            <tbody ng-if="!campaign_details.length">
+              <tr>
+                <td class="center" colspan="5">No data present</td>                
+              </tr>
+            </tbody> 
+                      
+          </table>
+        </div>
+        <div class="tags m-t-20">
+          <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="#/campaign/add" >Add</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</section>
